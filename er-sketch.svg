@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440">
+
+  <!-- Wood background -->
+  <rect width="620" height="440" fill="#D08B1E" rx="12"/>
+
+  <!-- ══ БУКВА Е ══
+       Stem: x20-80, full height 40-400
+       Top arm: x20-260, y40-100
+       Mid arm: x20-240, y190-245
+       Bot arm: x20-260, y340-400
+       Cuts (negative): upper y100-190, lower y245-340
+  -->
+  <path fill="#1e0b02" fill-rule="evenodd" d="
+    M 20 40 H 260 V 100 H 80 V 190 H 240 V 245 H 80 V 340 H 260 V 400 H 20 Z
+  "/>
+
+  <!-- ══ БУКВА Р ══
+       Stem: x280-340, full height
+       Bowl outer: D-shape x280-540, y40-240
+       Bowl inner (hole): x340-480, y95-185
+  -->
+  <path fill="#1e0b02" fill-rule="evenodd" d="
+    M 280 40
+    H 340
+    C 340 40 560 40 560 140
+    C 560 240 340 240 340 240
+    V 400
+    H 280
+    Z
+
+    M 340 98
+    C 340 98 490 98 490 140
+    C 490 182 340 182 340 182
+    Z
+  "/>
+
+  <!-- ══ КОНТРФОРМА: КРУЖКА ПИВА ══ -->
+
+  <!-- Тело кружки (в пространстве Е) -->
+  <rect x="82" y="80" width="196" height="282" rx="8" fill="#F5A020" opacity="0.75"/>
+
+  <!-- Пена сверху -->
+  <ellipse cx="100" cy="80" rx="20" ry="14" fill="#FFF8E8" opacity="0.85"/>
+  <ellipse cx="130" cy="72" rx="24" ry="16" fill="#FFF8E8" opacity="0.85"/>
+  <ellipse cx="162" cy="68" rx="26" ry="17" fill="#FFF8E8" opacity="0.85"/>
+  <ellipse cx="195" cy="72" rx="22" ry="15" fill="#FFF8E8" opacity="0.85"/>
+  <ellipse cx="222" cy="80" rx="20" ry="14" fill="#FFF8E8" opacity="0.85"/>
+
+  <!-- Пиво (тёмно-янтарное снизу) -->
+  <rect x="82" y="280" width="196" height="82" rx="0 0 8 8" fill="#C07010" opacity="0.6"/>
+
+  <!-- Ручка кружки = внутренность петли Р -->
+  <path fill="#F5A020" opacity="0.75" fill-rule="evenodd" d="
+    M 342 98
+    C 342 98 488 98 488 140
+    C 488 182 342 182 342 182
+    Z
+  "/>
+
+  <!-- Соединение тела и ручки (перемычка) -->
+  <rect x="258" y="110" width="85" height="60" fill="#F5A020" opacity="0.75"/>
+
+  <!-- Линия уровня пива -->
+  <line x1="82" y1="280" x2="278" y2="280" stroke="#C07010" stroke-width="3" opacity="0.7"/>
+
+  <!-- Подпись-аннотация -->
+  <text x="310" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#1e0b02" opacity="0.7">ЕР = кружка пива</text>
+</svg>
