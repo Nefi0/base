@@ -1,0 +1,11 @@
+{
+  "extraKnownMarketplaces": {
+    "tryopendata-skills": {
+      "source": "github",
+      "repo": "tryopendata/skills"
+    }
+  },
+  "enabledPlugins": {
+    "opendesign@tryopendata-skills": true
+  }
+}
