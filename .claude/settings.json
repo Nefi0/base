@@ -1,8 +1,8 @@
 {
   "extraKnownMarketplaces": {
     "tryopendata-skills": {
-      "source": "github",
-      "repo": "tryopendata/skills"
+      "source": "git",
+      "url": "https://github.com/tryopendata/skills.git"
     }
   },
   "enabledPlugins": {
