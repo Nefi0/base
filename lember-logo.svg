@@ -1,78 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1044 590">
   <defs>
-    <!-- Wood grain texture via filters -->
-    <filter id="wood" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.18" numOctaves="4" seed="3" result="noise"/>
+    <!-- Wood grain -->
+    <filter id="grain" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.22" numOctaves="5" seed="7" result="n"/>
       <feColorMatrix type="matrix"
-        values="0.6 0.3 0.1 0 0.55
-                0.4 0.25 0.05 0 0.32
-                0.1 0.05 0.02 0 0.08
-                0   0    0    1 0"
-        in="noise" result="coloredNoise"/>
-      <feBlend in="SourceGraphic" in2="coloredNoise" mode="multiply" result="blend"/>
-      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+        values="0.55 0.28 0.08 0 0.50
+                0.38 0.22 0.04 0 0.28
+                0.08 0.04 0.01 0 0.06
+                0    0    0    1 0"
+        in="n" result="c"/>
+      <feBlend in="SourceGraphic" in2="c" mode="multiply"/>
     </filter>
 
-    <!-- Rivet gradient -->
-    <radialGradient id="rivet" cx="35%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#d0cfc8"/>
-      <stop offset="40%" stop-color="#8a8880"/>
-      <stop offset="100%" stop-color="#4a4845"/>
-    </radialGradient>
-
-    <!-- Rivet pattern (grid knurl) -->
-    <pattern id="knurl" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="4" fill="#8a8880"/>
-      <rect x="0" y="0" width="2" height="2" fill="#6a6865"/>
-      <rect x="2" y="2" width="2" height="2" fill="#6a6865"/>
-    </pattern>
-
-    <clipPath id="oval-clip">
-      <ellipse cx="270" cy="160" rx="255" ry="148"/>
+    <!-- Oval clip -->
+    <clipPath id="ovalClip">
+      <ellipse cx="522" cy="295" rx="500" ry="272"/>
     </clipPath>
 
-    <!-- Emboss filter for text -->
-    <filter id="emboss">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feOffset dx="1" dy="2" result="offset"/>
-      <feComposite in="SourceGraphic" in2="offset" operator="over"/>
-    </filter>
+    <!-- Rivet radial gradient -->
+    <radialGradient id="riv" cx="35%" cy="30%" r="65%">
+      <stop offset="0%"  stop-color="#ccc9c0"/>
+      <stop offset="45%" stop-color="#807d76"/>
+      <stop offset="100%" stop-color="#3c3a36"/>
+    </radialGradient>
+
+    <!-- Rivet knurl pattern -->
+    <pattern id="knurl" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#7a7870"/>
+      <rect x="0" y="0" width="3" height="3" fill="#606058"/>
+      <rect x="3" y="3" width="3" height="3" fill="#606058"/>
+    </pattern>
   </defs>
 
-  <!-- Dark brown outer border -->
-  <ellipse cx="270" cy="160" rx="262" ry="155" fill="#2a1408"/>
+  <!-- ── LAYER 1: BACKGROUND (oval + wood) ── -->
+  <g id="background">
+    <!-- Dark border ring -->
+    <ellipse cx="522" cy="295" rx="516" ry="284" fill="#1e0b02"/>
+    <!-- Wood fill -->
+    <ellipse cx="522" cy="295" rx="500" ry="272" fill="#D08B1E"/>
+    <!-- Wood grain overlay -->
+    <ellipse cx="522" cy="295" rx="500" ry="272" fill="#C07A10" filter="url(#grain)" opacity="0.85"/>
+    <!-- Inner border shadow -->
+    <ellipse cx="522" cy="295" rx="500" ry="272" fill="none" stroke="#12060080" stroke-width="10"/>
+  </g>
 
-  <!-- Wood base fill -->
-  <ellipse cx="270" cy="160" rx="255" ry="148" fill="#D4952A"/>
+  <!-- ── LAYER 2: RIVETS ── -->
+  <g id="rivets">
+    <!-- Left rivet -->
+    <circle cx="104" cy="295" r="32" fill="url(#riv)"/>
+    <circle cx="104" cy="295" r="32" fill="url(#knurl)" opacity="0.55"/>
+    <circle cx="104" cy="295" r="32" fill="none" stroke="#1a1810" stroke-width="2"/>
+    <ellipse cx="96" cy="285" rx="9" ry="5" fill="white" opacity="0.22"/>
+    <!-- Right rivet -->
+    <circle cx="940" cy="295" r="32" fill="url(#riv)"/>
+    <circle cx="940" cy="295" r="32" fill="url(#knurl)" opacity="0.55"/>
+    <circle cx="940" cy="295" r="32" fill="none" stroke="#1a1810" stroke-width="2"/>
+    <ellipse cx="932" cy="285" rx="9" ry="5" fill="white" opacity="0.22"/>
+  </g>
 
-  <!-- Wood grain overlay -->
-  <ellipse cx="270" cy="160" rx="255" ry="148" fill="#C8881F" filter="url(#wood)" opacity="0.9"/>
-
-  <!-- Subtle inner shadow at border -->
-  <ellipse cx="270" cy="160" rx="255" ry="148" fill="none" stroke="#1a0a02" stroke-width="6" opacity="0.4"/>
-
-  <!-- Text "ЛЕМБЕР" -->
-  <text
-    x="270" y="190"
-    text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="118"
-    font-weight="900"
-    fill="#2a0e05"
-    filter="url(#emboss)"
-    letter-spacing="-2"
-  >ЛЕМБЕР</text>
-
-  <!-- Left rivet -->
-  <circle cx="58" cy="160" r="18" fill="url(#rivet)"/>
-  <circle cx="58" cy="160" r="18" fill="url(#knurl)" opacity="0.6"/>
-  <circle cx="58" cy="160" r="18" fill="none" stroke="#2a2825" stroke-width="1.5"/>
-  <!-- rivet highlight -->
-  <ellipse cx="53" cy="154" rx="5" ry="3" fill="white" opacity="0.25"/>
-
-  <!-- Right rivet -->
-  <circle cx="482" cy="160" r="18" fill="url(#rivet)"/>
-  <circle cx="482" cy="160" r="18" fill="url(#knurl)" opacity="0.6"/>
-  <circle cx="482" cy="160" r="18" fill="none" stroke="#2a2825" stroke-width="1.5"/>
-  <ellipse cx="477" cy="154" rx="5" ry="3" fill="white" opacity="0.25"/>
+  <!-- ── LAYER 3: TEXT (top — use as counterform) ── -->
+  <g id="text-layer">
+    <text
+      x="522"
+      y="372"
+      text-anchor="middle"
+      font-family="'Arial Black', 'Impact', 'Franklin Gothic Heavy', sans-serif"
+      font-size="240"
+      font-weight="900"
+      fill="#1e0b02"
+      letter-spacing="-4"
+    >ЛЕМБЕР</text>
+  </g>
 </svg>
