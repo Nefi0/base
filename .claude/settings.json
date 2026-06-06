@@ -6,6 +6,8 @@
     }
   },
   "enabledPlugins": {
-    "opendesign@tryopendata-skills": true
+    "opendesign@tryopendata-skills": true,
+    "openchart@tryopendata-skills": true,
+    "opendata@tryopendata-skills": true
   }
 }
