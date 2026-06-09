@@ -1,27 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 140">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.44 163">
   <defs>
     <clipPath id="sausageShape">
-      <!-- Sausage body: vertical cylinder with rounded ends and pinched string ties at top and bottom -->
-      <path fill-rule="evenodd" d="
-        M 17.5 4
-        C 17.5 4 22 5 24 8
-        C 26 11 26.5 15 26.5 17
-        L 26.5 123
-        C 26.5 125 26 129 24 132
-        C 22 135 17.5 136 17.5 136
-        C 17.5 136 13 135 11 132
-        C 9 129 8.5 125 8.5 123
-        L 8.5 17
-        C 8.5 15 9 11 11 8
-        C 13 5 17.5 4 17.5 4
-        Z
-      "/>
-    </clipPath>
-    <clipPath id="tieTopClip">
-      <ellipse cx="17.5" cy="9" rx="5.5" ry="4"/>
-    </clipPath>
-    <clipPath id="tieBotClip">
-      <ellipse cx="17.5" cy="131" rx="5.5" ry="4"/>
+      <!-- Exact silhouette from Illustrator file, flipped to SVG coords -->
+      <path transform="matrix(1,0,0,-1,9.775,3)"
+        d="M0 0C-1.924 .019-8.807-2.937-9.775-6.482-10.111-7.711-9.775-144.562-9.775-148.339-9.775-152.116-8.699-153.23-6.764-154.243-4.828-155.255-1.087-156.876 0-156.977 1.087-157.078 5.869-154.764 7.325-154.141 9.691-153.128 10.659-151.103 10.659-147.457V-8.254C10.659-5.747 9.745-4.912 6.599-3.089 3.453-1.266 1.399-.014 0 0"/>
     </clipPath>
   </defs>
 
@@ -29,52 +11,50 @@
   <g clip-path="url(#sausageShape)">
 
     <!-- База -->
-    <rect x="6" y="2" width="24" height="138" fill="#D9A24E"/>
+    <rect x="-2" y="-2" width="26" height="167" fill="#D9A24E"/>
 
-    <!-- Тёмные горизонтальные зоны (тень) -->
-    <path fill="#BE872F" d="M 6 10 C 14 7 22 11 32 9 L 32 19 C 21 22 13 18 6 20 Z"/>
-    <path fill="#C28B32" d="M 6 36 C 15 33 23 38 32 35 L 32 46 C 22 49 14 44 6 47 Z"/>
-    <path fill="#C99139" d="M 6 62 C 16 58 24 64 32 61 L 32 72 C 23 75 15 70 6 73 Z"/>
-    <path fill="#BE872F" d="M 6 90 C 14 87 22 93 32 90 L 32 100 C 21 103 13 98 6 101 Z"/>
-    <path fill="#C28B32" d="M 6 116 C 15 113 23 118 32 115 L 32 126 C 22 129 14 124 6 127 Z"/>
+    <!-- Тёмные горизонтальные зоны -->
+    <path fill="#BE872F" d="M -2 8  C 10 5  18 9  24 7  L 24 17 C 17 20 9 16 -2 18 Z"/>
+    <path fill="#C28B32" d="M -2 34 C 11 31 19 36 24 33 L 24 44 C 18 47 10 42 -2 45 Z"/>
+    <path fill="#C99139" d="M -2 60 C 12 56 20 62 24 59 L 24 70 C 19 73 11 68 -2 71 Z"/>
+    <path fill="#BE872F" d="M -2 88 C 10 85 18 91 24 88 L 24 98 C 17 101 9 96 -2 99 Z"/>
+    <path fill="#C28B32" d="M -2 114 C 11 111 19 116 24 113 L 24 124 C 18 127 10 122 -2 125 Z"/>
+    <path fill="#C99139" d="M -2 140 C 12 137 20 142 24 139 L 24 150 C 19 153 11 148 -2 151 Z"/>
 
-    <!-- Светлые горизонтальные зоны (свет) -->
-    <path fill="#E4B45F" d="M 6 23 C 15 20 23 25 32 22 L 32 31 C 21 34 13 29 6 32 Z"/>
-    <path fill="#EBBE6C" d="M 6 49 C 16 46 24 51 32 48 L 32 57 C 23 60 15 55 6 58 Z"/>
-    <path fill="#E4B45F" d="M 6 76 C 14 73 22 78 32 75 L 32 85 C 21 88 13 83 6 86 Z"/>
-    <path fill="#EBBE6C" d="M 6 104 C 15 101 23 106 32 103 L 32 112 C 22 115 14 110 6 113 Z"/>
+    <!-- Светлые горизонтальные зоны -->
+    <path fill="#E4B45F" d="M -2 20 C 11 17 19 22 24 19 L 24 28 C 18 31 10 26 -2 29 Z"/>
+    <path fill="#EBBE6C" d="M -2 47 C 12 44 20 49 24 46 L 24 55 C 19 58 11 53 -2 56 Z"/>
+    <path fill="#E4B45F" d="M -2 74 C 10 71 18 76 24 73 L 24 83 C 17 86 9 81 -2 84 Z"/>
+    <path fill="#EBBE6C" d="M -2 102 C 11 99 19 104 24 101 L 24 110 C 18 113 10 108 -2 111 Z"/>
+    <path fill="#E4B45F" d="M -2 128 C 12 125 20 130 24 127 L 24 136 C 19 139 11 134 -2 137 Z"/>
 
     <!-- Горизонтальные волокна -->
-    <g stroke="#A9742450" fill="none" stroke-width="0.5" stroke-linecap="round">
-      <path d="M 6 6  C 14 8  24 5  32 7"/>
-      <path d="M 6 15 C 15 13 25 17 32 14"/>
-      <path d="M 6 27 C 14 29 23 26 32 28" stroke-width="0.4" opacity="0.7"/>
-      <path d="M 6 39 C 16 37 25 41 32 38"/>
-      <path d="M 6 52 C 15 54 24 51 32 53"/>
-      <path d="M 6 64 C 14 66 23 63 32 65" stroke-width="0.4" opacity="0.7"/>
-      <path d="M 6 75 C 16 73 25 77 32 74"/>
-      <path d="M 6 87 C 15 89 24 86 32 88"/>
-      <path d="M 6 98 C 14 96 23 100 32 97" stroke-width="0.4" opacity="0.7"/>
-      <path d="M 6 110 C 16 112 25 109 32 111"/>
-      <path d="M 6 122 C 15 120 24 124 32 121"/>
-      <path d="M 6 132 C 14 134 23 131 32 133" stroke-width="0.4" opacity="0.7"/>
+    <g stroke="#A9742450" fill="none" stroke-width="0.45" stroke-linecap="round">
+      <path d="M -2 5  C 10 7  18 4  24 6"/>
+      <path d="M -2 13 C 11 11 19 15 24 12"/>
+      <path d="M -2 24 C 10 26 18 23 24 25" stroke-width="0.35" opacity="0.7"/>
+      <path d="M -2 37 C 12 35 20 39 24 36"/>
+      <path d="M -2 50 C 11 52 19 49 24 51"/>
+      <path d="M -2 63 C 10 61 18 65 24 62" stroke-width="0.35" opacity="0.7"/>
+      <path d="M -2 77 C 12 75 20 79 24 76"/>
+      <path d="M -2 92 C 11 94 19 91 24 93"/>
+      <path d="M -2 107 C 10 105 18 109 24 106" stroke-width="0.35" opacity="0.7"/>
+      <path d="M -2 120 C 12 118 20 122 24 119"/>
+      <path d="M -2 133 C 11 135 19 132 24 134"/>
+      <path d="M -2 148 C 10 146 18 150 24 147" stroke-width="0.35" opacity="0.7"/>
     </g>
 
     <!-- Сучки -->
-    <ellipse cx="24" cy="55" rx="2.2" ry="1.4" fill="#AB7726" opacity="0.6"/>
-    <ellipse cx="11" cy="88" rx="1.7" ry="1.1" fill="#AB7726" opacity="0.5"/>
-    <ellipse cx="20" cy="112" rx="1.4" ry="0.9" fill="#E8BC68" opacity="0.5"/>
+    <ellipse cx="16" cy="52"  rx="2.1" ry="1.3" fill="#AB7726" opacity="0.55"/>
+    <ellipse cx="5"  cy="100" rx="1.6" ry="1.0" fill="#AB7726" opacity="0.5"/>
+    <ellipse cx="13" cy="130" rx="1.3" ry="0.8" fill="#E8BC68" opacity="0.5"/>
   </g>
 
-  <!-- ══ ПЕРЕВЯЗКА СВЕРХУ ══ -->
-  <!-- Шейка сужения -->
-  <ellipse cx="17.5" cy="14" rx="4.8" ry="2.5" fill="#C07820" opacity="0.85"/>
-  <!-- Узел/бугорок -->
-  <ellipse cx="17.5" cy="9" rx="5" ry="4" fill="#A86820" opacity="0.9"/>
-  <ellipse cx="16" cy="7.5" rx="1.8" ry="1.2" fill="#C88030" opacity="0.55"/>
+  <!-- ══ ВЕРХНИЙ УЗЕЛОК ══ -->
+  <ellipse cx="9.775" cy="1.5" rx="1.6" ry="1.5" fill="#A06020" opacity="0.9"/>
+  <ellipse cx="9.1"   cy="1.0" rx="0.6" ry="0.4" fill="#C88030" opacity="0.5"/>
 
-  <!-- ══ ПЕРЕВЯЗКА СНИЗУ ══ -->
-  <ellipse cx="17.5" cy="126" rx="4.8" ry="2.5" fill="#C07820" opacity="0.85"/>
-  <ellipse cx="17.5" cy="131" rx="5" ry="4" fill="#A86820" opacity="0.9"/>
-  <ellipse cx="16" cy="129.5" rx="1.8" ry="1.2" fill="#C88030" opacity="0.55"/>
+  <!-- ══ НИЖНИЙ УЗЕЛОК ══ -->
+  <ellipse cx="9.775" cy="161.5" rx="1.6" ry="1.5" fill="#A06020" opacity="0.9"/>
+  <ellipse cx="9.1"   cy="161.0" rx="0.6" ry="0.4" fill="#C88030" opacity="0.5"/>
 </svg>
